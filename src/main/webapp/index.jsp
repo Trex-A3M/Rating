@@ -94,6 +94,14 @@
           <!--<p>Lorem ipsum...</p>-->
           <center style="padding-top: 100px"><h1>rateme</h1></center>
           <center style="padding-top: 20px"><input input type="text" name="search" placeholder="Search.."></center>
+          <div class="container-fluid">
+            <div class="row content">
+              <div class="col-lg-12 text-right">
+                <button type="button" class="btn btn-outline-primary">Primary</button>
+                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
