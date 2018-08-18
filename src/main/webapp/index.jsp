@@ -97,15 +97,13 @@
           <div class="container-fluid">
             <div class="row content">
               <div class="col-lg-12 text-right">
-                <button type="button" class="btn btn-outline-primary">Primary</button>
-                <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                <a class="btn btn-outline-primary">Primary</a>
+                <a class="btn btn-outline-secondary">Secondary</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
     </div>
   </div>
   <!-- /#page-content-wrapper -->
