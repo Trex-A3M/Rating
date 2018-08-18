@@ -112,14 +112,14 @@
 
       </div>
       <!--this is inside the box and contain the ADS-->
-      <div class="col-sm-2 sidenav">
-        <!--<div class="well">-->
-        <!--<p>ADS</p>-->
-        <!--</div>-->
-        <!--<div class="well">-->
-        <!--<p>ADS</p>-->
-        <!--</div>-->
-      </div>
+      <%--<div class="col-sm-4 sidenav">--%>
+        <%--<div class="well">--%>
+        <%--<p>ADS</p>--%>
+        <%--</div>--%>
+        <%--<div class="well">--%>
+        <%--<p>ADS</p>--%>
+        <%--</div>--%>
+      <%--</div>--%>
     </div>
   </div>
 
