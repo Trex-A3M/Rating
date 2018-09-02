@@ -90,7 +90,7 @@
 
         <div class="col-sm-8">
           <div align="center">
-            <h1>rateme</h1>
+            <h1 style="padding-bottom: 15px">rateme</h1>
             <input input type="text" name="search" placeholder="Search..">
           </div>
           <br>
