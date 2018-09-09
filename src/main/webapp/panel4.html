@@ -117,7 +117,7 @@
                         </div>
                         <br class="breadcrumb">
                         <div>
-                            <button type="button" class="btn btn-outline-success" style="width: 100px">add</button>
+                            <button type="button" class="btn btn-outline-success" style="width: 100px" onclick="loadDoc()">add</button>
                             <button type="button" class="btn btn-outline-danger" style="width: 100px">remove</button>
                             <button type="button" class="btn btn-outline-info" style="width: 100px">modify</button>
                         </div>
@@ -234,6 +234,20 @@
         // Get the element with id="defaultOpen" and click on it
         document.getElementById("defaultOpen").click();
     </script>
+
+    <script>
+        function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange=function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "demo_get.asp?t=" + Math.random(), true);
+            xhttp.send();
+        }
+    </script>
+
 
 
 </body>
