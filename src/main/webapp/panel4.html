@@ -104,6 +104,7 @@
                     <div class="12">
                         <div>
                             <p class="h4">category configuration</p>
+                            <p id="demo" >amesterdam </p>
                         </div>
                         <hr>
                         <p class="font-weight-normal"><small>add/remove or modify the categories</small></p>
@@ -117,7 +118,7 @@
                         </div>
                         <br class="breadcrumb">
                         <div>
-                            <button type="button" class="btn btn-outline-success" style="width: 100px" onclick="loadDoc()">add</button>
+                            <button type="button" class="btn btn-outline-success" style="width: 100px">add</button>
                             <button type="button" class="btn btn-outline-danger" style="width: 100px">remove</button>
                             <button type="button" class="btn btn-outline-info" style="width: 100px">modify</button>
                         </div>
@@ -133,17 +134,15 @@
                 <div class="row">
                     <div class="col-4"></div>
                     <div class="col-4">
-
                         <p class="h4">category configuration</p>
                         <hr>
 
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="give your text" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="tex    t" class="form-control" placeholder="give your text" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">add</button>
+                                <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('demo').innerHTML = Date()">add</button>
                                 <button class="btn btn-outline-secondary" type="button">remove</button>
                                 <button class="btn btn-outline-secondary" type="button">modify</button>
-
                             </div>
                         </div>
                     </div>
@@ -243,7 +242,7 @@
                     document.getElementById("demo").innerHTML = this.responseText;
                 }
             };
-            xhttp.open("GET", "demo_get.asp?t=" + Math.random(), true);
+            xhttp.open("GET", "localhost:8080/category/save_cat?name=mango", true);
             xhttp.send();
         }
     </script>
