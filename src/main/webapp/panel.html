@@ -56,6 +56,10 @@
                 <button type="button" class="btn btn-danger" style="margin-top: 20px" onclick="lepp()">click me </button>
                 <button type="button" class="btn btn-dark" style="margin-top: 20px" onclick="mhmfunction()">click for calculation</button>
                 <button type="button" class="btn btn-info" style="margin-top: 20px" onclick="n1function()">testing object</button>
+                <button type="button" class="btn btn-dark" style="margin-top: 20px" onclick="n2function(3 , 4)">function with parameters</button>
+                <button type="button" class="btn btn-outline-success" style="margin-top: 20px" onclick="n3function()">last try</button>
+                <button class="btn btn-outline-danger" style="margin-top: 20px" onclick="loadDoc()">ajax uses</button>
+                <p onkeydown ="n3function()">slama</p>
                 <p id="demo" style="margin-top: 50px">sharkilar</p>
                 <p id = "keya" style="margin-top: 50px">blade runner</p>
                 <p id = "mirkava" class="h6" style="margin-top: 30px">hala madrid</p>
@@ -70,24 +74,7 @@
     </div>
 </div>
 <!--change contents according to clicks-->
-<script>
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-    }
 
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
-</script>
 <script>
     function lepp() {
         document.getElementById("demo" ).innerHTML = "<button class='btn btn-danger' id='crm' onclick='myfunction()'>this is java script </button>";
