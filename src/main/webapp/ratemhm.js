@@ -54,7 +54,7 @@ function n3function() {
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             document.getElementById("mirkava").innerHTML =
                 this.responseText;
@@ -63,3 +63,6 @@ function loadDoc() {
     xhttp.open("GET", "localhost:8080/category/save_cat?name=sina", true);
     xhttp.send();
 }
+
+
+

@@ -16,6 +16,8 @@
     <!-- Font Awesome JS -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="mhmjQuery.js"></script>
 </head>
 
 <body>
@@ -118,7 +120,7 @@
                         </div>
                         <br class="breadcrumb">
                         <div>
-                            <button type="button" class="btn btn-outline-success" style="width: 100px">add</button>
+                            <button type="button" class="btn btn-outline-success" style="width: 100px" id="addCategory">add</button>
                             <button type="button" class="btn btn-outline-danger" style="width: 100px">remove</button>
                             <button type="button" class="btn btn-outline-info" style="width: 100px">modify</button>
                         </div>
@@ -138,7 +140,7 @@
                         <hr>
 
                         <div class="input-group">
-                            <input type="tex    t" class="form-control" placeholder="give your text" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control" placeholder="give your text" aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('demo').innerHTML = Date()">add</button>
                                 <button class="btn btn-outline-secondary" type="button">remove</button>
