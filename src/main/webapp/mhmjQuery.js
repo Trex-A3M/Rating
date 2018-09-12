@@ -48,26 +48,105 @@ $(document).ready(function(){
 //     });
 // });
 
+//
+// $(document).ready(function(){
+//     $('#ok').click(function(){
+//         var uname = document.getElementById("addCategory").value;
+//         var password = document.getElementById("pwd").value;
+//         var JSONObject= {
+//             "uname":uname,
+//             "password":password
+//         };
+//
+//         $.ajax({
+//             url:'http://localhost:8090/LoginAuthRWS/rest/orders',
+//             type:'post',
+//             data :  JSONObject,
+//             dataType: 'JSON',
+//             success: function(data) {
+//                 var jsonData = $.parseJSON(data); //if data is not json
+//                 $('#name').val(jsonData.name);
+//                 $('#email').val(jsonData.email);
+//             }
+//         });
+//     });
+// });
+//
 
 $(document).ready(function(){
-    $('#ok').click(function(){
-        var uname = document.getElementById("uname").value;
-        var password = document.getElementById("pwd").value;
-        var JSONObject= {
-            "uname":uname,
-            "password":password
-        };
+    $('#addCategory').click(function(){
+        var uname = document.getElementById("okkkk").value;
+
+
 
         $.ajax({
-            url:'http://localhost:8090/LoginAuthRWS/rest/orders',
-            type:'post',
-            data :  JSONObject,
-            dataType: 'JSON',
+            url:'localhost:8080/category/save_cat',
+            type:'get',
+            data :  uname,
             success: function(data) {
-                var jsonData = $.parseJSON(data); //if data is not json
-                $('#name').val(jsonData.name);
-                $('#email').val(jsonData.email);
+                //var jsonData = $.parseJSON(data); //if data is not json
+
             }
         });
     });
 });
+
+$(document).ready(function () {
+    $('#addCategory').click(function () {
+        
+    })
+    
+})
+
+
+
+function createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+
+        // Check if the XMLHttpRequest object has a "withCredentials" property.
+        // "withCredentials" only exists on XMLHTTPRequest2 objects.
+        xhr.open(method, url, true);
+
+    } else if (typeof XDomainRequest != "undefined") {
+
+        // Otherwise, check if XDomainRequest.
+        // XDomainRequest only exists in IE, and is IE's way of making CORS requests.
+        xhr = new XDomainRequest();
+        xhr.open(method, url);
+
+    } else {
+
+        // Otherwise, CORS is not supported by the browser.
+        xhr = null;
+
+    }
+    return xhr;
+}
+
+var xhr = createCORSRequest('GET', url);
+if (!xhr) {
+    throw new Error('CORS not supported');
+}
+
+
+////////////////******************************************//////////////
+$.ajax({
+    //JSONP API
+    url: "http://192.168.128.73:8080/category/save_cat?name=mohamad",
+    //the name of the callback function
+    jsonp: "jsonpcallback",
+    //tell jQuery to expect JSONP
+    dataType: "jsonp",
+    //tell YQL what we want and that we want JSON
+    data: {
+        id: "123"
+    },
+    //work with the response
+    success: function(data) {
+        console.log(data); //formatted JSON data
+    }
+});
+
+
+///////////////////////
